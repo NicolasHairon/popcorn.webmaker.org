@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Popcorn Maker - Fork for CLAIRE</title>
+
+  </head>
+  <body>
+<h1>Popcorn Maker - Fork for CLAIRE</h1>
+  <header>
+	<h2>INRIA Grenoble, France - TYREX Team</h2>
+  </header>
+
+<p>Apr 29, 2014</p>
+<p>Author: Nicolas Hairon</p>
+<p><a href="mailto:nicolas.hairon@inria.fr">nicolas.hairon@inria.fr</a></p>
+<p><a href="http://tyrex.inria.fr/">http://tyrex.inria.fr</a></p>
+
+<h2>Introduction</h2>
+
+<p>This document introduces a web application to quickly get up and running video-based courses with chaptering, in a single player. This project has been conducted in the context of the <a href="http://www.projet-claire.fr">CLAIRE project</a>.</p>
+
+<p>It is a fork of the <a href="https://popcorn.webmaker.org/">Mozilla Popcorn Maker</a> project. Popcorn Maker (<a href="https://popcorn.webmaker.org">https://popcorn.webmaker.org</a>) is a web application created by Mozilla Fundation. It is a web-based editor that simplifies the creation of rich media on the web. You can find a FAQ of Popcorn Maker here:</p>
+
+
+<p><a href="https://support.mozilla.org/en-US/products/webmaker/popcorn-maker">https://support.mozilla.org/en-US/products/webmaker/popcorn-maker</a></p>
+
+<p>If you want to become familiar with Popcorn Maker, you can start by reading <a href="https://blog.mozilla.org/blog/2012/11/11/popcorn-maker/">this introducing article by Mozilla</a>. You can also read <a href="http://www.wikihow.com/Use-Mozilla%27s-Popcorn-Maker">this page</a>.</p>
+
+
+<p>You can test it here:</p>
+
+<p><a href="https://popcorn.webmaker.org/">https://popcorn.webmaker.org</a></p>
+
+<p>The code of the CLAIRE fork of Popcorn Maker is located here:</p>
+
+
+<p><a href="https://github.com/NicolasHairon/popcorn.webmaker.org">https://github.com/NicolasHairon/popcorn.webmaker.org</a></p>
+
+
+
+<h2>Installation</h2>
+
+<p>To install the web application, please read README.md file:</p>
+
+<p><a href="https://github.com/NicolasHairon/popcorn.webmaker.org/blob/master/README.md">https://github.com/NicolasHairon/popcorn.webmaker.org/blob/master/README.md</a></p>
+
+<p>In the next parts, we assure you have installed the webapp and that it is running on <a href="http://localhost:8888">http://localhost:8888</a>.</p>
+
+<h2>Usage</h2>
+
+<p>In the following, we detail two scenarios to create a chaptered video course.</p>
+
+<h3>Scenario 1: How to create course with chaptering starting from online videos</h3>
+
+<p>Let's consider the following video URLs that are part of the French MOOC <a href="http://fr.openclassrooms.com/mooc/apprenez-a-creer-votre-site-web-avec-html5-et-css3">Learn how to create a website with HTML5 and CSS3</a> edited by <a href="http://fr.openclassrooms.com/">OpenClassrooms</a>. The five following videos constitute the first chapter, in the chronological order:</p>
+
+<ul><li><a href="http://www.youtube.com/watch?v=-E7A1FxqiPM">http://www.youtube.com/watch?v=-E7A1FxqiPM</a></li>
+<li><a href="http://www.youtube.com/watch?v=DbJsWEV6Xsk">http://www.youtube.com/watch?v=DbJsWEV6Xsk</a></li>
+<li><a href="http://www.youtube.com/watch?v=LjODK3rEE80">http://www.youtube.com/watch?v=LjODK3rEE80</a></li>
+<li><a href="http://www.youtube.com/watch?v=K6LsgKph_Rc">http://www.youtube.com/watch?v=K6LsgKph_Rc</a></li>
+<li><a href="http://www.youtube.com/watch?v=DQpgMGB8nT0">http://www.youtube.com/watch?v=DQpgMGB8nT0</a></li>
+</ul>
+
+<p>The following steps are about generating quickly and simply a single 
+video player for the related chapter, with chaptering to help the reader
+ to navigate.</p>
+
+<ol>
+	<li>Access to the editor:<br>
+	<a href="http://localhost:8888">http://localhost:8888</a><br>
+	You can change the language by using the top right language switcher.</li>
+
+	<li>We will now import the abode video in the editor. In the "Media" 
+tab, copy the above list of video URLS (the five lines) and paste them 
+in the text bow with caption "Paste an HTML5, YouTube, Vimeo or 
+Soundcloud link here".</li>
+
+	<li>Clic on the appearing button "Create clip". This will import every single video you pasted in the above text box.</li>
+
+	<li>Once import is finished, they all appear in the "My media gallery" panel.<br>
+	We could as well add each video one by one, but that's not what we 
+want. What is interesting is to add all video in single file. This is 
+the role of the "Add all" button. Click it.</li>
+
+	<li>You can notice the video have been imported in the timeline and the corresponding chaptering has been created.</li>
+</ol>
+
+<p>By visiting the "Chapter" tab, you can rename the chapter (named 
+after video titles), create sub-chapters. Above the timebar, you can 
+drag and drop chapter markers to move the begining of a chapter.</p>
+
+<p>Once you're done, clic on the top label "My new project" and give it a
+ name. Press Enter and click the "Save" button. Click on the "Preview" 
+button to open the generated player.</p>
+
+
+<h3>Scenario 2: Create a chaptered course without media resources</h3>
+
+<p>Now, let's imagine we want to create a 20 minutes coursewith a given 
+table of contents. We will see how to create the chaptering.</p>
+
+<p>For instance, let's take the <a href="http://html5.ens-lyon.fr/CSP/PCP2011/Esnouf/electron-source-images-analyses-Esnouf.html">following French course</a>. Its table of contents is:
+
+</p><ul><ol>Introduction</ol>
+	<ol>Les types de microscopie électronique
+		<ul><ol>En transmission (MET) - à balayage (MEB)</ol>
+			<ol>Microscopie tunnel</ol>
+		</ul>
+	</ol>
+	<ol>Les organes des microscopes MEB et MET</ol>
+	<ol>Les signaux recueillis
+		<ul><ol>Les principaux signaux</ol>
+			<ol>Les principaux phénomènes</ol>
+			<ol>La microscopie à balayage</ol>
+			<ol>L'imagerie 3D par "Dual Beam SEM/FIB"</ol>
+		</ul>
+	</ol>
+</ul>
+
+<ol>
+	<li>Access to the editor:<br>
+	<a href="http://localhost:8888">http://localhost:8888</a></li>
+
+	<li>Define the course length by clicking on the small text box in the bottom left, on the right of the rounded green play button.<br>
+		By default it is set to "0:30", which means 30 secondes of total length in the timeline.<br>
+	We want it to be 20 minutes, so type "20:00" in the text box and validate by Enter.</li>
+
+	<li>Click on the "Chapter" tab, and click on the "Create Table of Contents" button.</li>
+
+	<li>A first top level chapter has been created with the default text 
+"1". It also appears in the timeline and takes all edit length for now, 
+as it is the first chapter.<br>
+	You can edit the chapter title by clicking on the chapter label in the 
+chapter panel. Set it to "Introduction". Validate by Enter. The title 
+has been updated both in the chapter panel and in the timeline.</li>
+
+	<li>In the chapter tab, add another top level chapter by click on the bottom arrow "↓", on the left of the chapter "Introduction".</li>
+
+	<li>A new top level chapter has been created. It's called "2", you can 
+edit its title and change it to "Les types de microscopie électronique".<br>
+		You also have to move its begin date aboce the timebar by drag and droping its marker.</li>
+
+	<li>Likewise, it is possible to create sub-level chapters by clickink 
+on the right arrow "→" on the left of a given chapter. You can as well 
+edit its title and move its start date.</li>
+
+	<li>Once you've completed the edition of the table of content, it's up to you to add content in the timelines. You can already add:<br>
+		<ul><li>vidéos (from YouTube, Vimeo or self-hosted)</li>
+			<li>audio (wav, mp3 or Soundcloud)</li>
+			<li>images</li>
+			<li>Google Maps</li>
+			<li>etc.</li>
+		</ul>
+	</li>
+
+</ol>
+
+<p>The whole set of events you can add in the timeline is accessible in the "Events" tab.</p>
+
+</body></html>
+
+
+
+
+<h2>Exported players</h2>
+
+<p>As we have seen, each edit is exports itself as a player in three ways:</p>
+
+<ul>
+	<li>a standard player using <a href="http://popcornjs.org/">Popcorn.js</a> library;</li>
+	<li>a JavaScript-compiled player (ie where all the logic is encapsulated in a single JavaScript file) using also <a href="http://popcornjs.org/">Popcorn.js</a>;</li>
+	<li>a propotype of player using <a href="http://wam.inrialpes.fr/timesheets">Timesheets.js</a>.</li>
+</ul>
+
+<p>Timesheets.js is a declarative approach to synchronize web content developped by the TYREX Team from INRIA Grenoble. You can read more about it here:</p>
+
+<p><a href="https://popcorn.webmaker.org/">http://wam.inrialpes.fr/timesheets/</a></p>
+
+<p>This prototype player is inspired from the following example and has been adapted to use YouTube
+
+<p>After clicking "Save" button, these players are respectively accessible using the following URLs (where XX represent the generated ID of the player):</p>
+
+<ul>
+	<li>Standard Popcorn.js player: http://localhost:8888/players/XX.html</li>
+	<li>JavaScript-compiled player: http://localhost:8888/players/XX_oc.html</li>
+	<li>Timesheets.js player: http://localhost:8888/players/XX_t.html</li>
+</ul>
+
+
+<h2>Code details</h2>
+
+<p>This section details at a high level the code modification brought to the original Popcorn Maker base code (<a href="https://github.com/mozilla/popcorn.webmaker.org">located here</a>).</p>
+
+<h3>Editor</h3>
+
+<p>On the Popcorn Maker editor side, the most important feature is the chapter editor. It is located in<br/>
+/public/src/editor/chapter-editor.js</p>
+
+<h3>Plugins</h3>
+
+<p>Popcorn Maker has a modular approach based on plugins, more precisely track event plugins. In the context of this fork, two new plugins have been developped for chaptering feature.</p>
+
+<ul><li>chapter plugin (located in /public/templates/assets/plugins/chapter)<br/>
+A chapter track event is automatically placed in the timeline to symbolize the beginning of a chapter.<br/>
+A chapter has for attributes: text (title of the chapter), level (three levels maximum: 1 for highest level, 3 for the lowest), start (start date of the chapter), end.<br/>
+The end attribute is actually start date plus a fixed intervall of time. This workaround is used to avoid visualisation issues in the editor (in case of moving the start date of a chapter).</li>
+
+<li>toc plugin (located in /public/templates/assets/plugins/chapter)<br/>
+A toc track event (or table of content track event) carries the information about the hierarchy of the chaptering.<br/>
+The attributes: start (usually media start), end (usually media end), jsonml (a json-ified version of an HTML list to save the chapter hierarchy, see <a href="http://www.jsonml.org">jsonml.org</a>).</li>
+</ul>
+
+<h3>Player</h3>
+
+<p>In the player, all the interaction logic concerning the chaptering side panel is located in:<br/>
+/public/src/embed.js<br/>
+/public/src/ui/widget/controls.js</p>
+
+<p>The JavaScript-compiled player is using the generated file:<br/>
+/public/src/embed-built.js<br/>
+See installation Readme to find out how to generate it.</p>
+
+<p>The Timesheets.js player is using the file:<br/>
+/public/src/embed-timesheets.js<br/>
+
+<h2>Open problematics</h2>
+
+<p>Popcorn Player is compatible with the modern desktop browsers. An open problematic is the compatibility with mobile device systems, such as iOS and Android-based devices. The team who designed Kettlecorn (see below) is currently tyring to adress this problematic.</p>
+
+<h2>Going further</h2>
+
+<p>You are free to fork, modify, upgrade this Popcorn Maker fork.</p>
+
+<p>To keep yourself up-to-date or ask questions to the Popcorn community, you can register to the devoted mailing list:</p>
+
+<p><a href="https://mail.mozilla.org/listinfo/community-popcorn">https://mail.mozilla.org/listinfo/community-popcorn</a></p>
+
+<p>You can contact the <a href="http://www.openclassrooms.com">OpenClassrooms</a> team, who is currently integrating this fork into CLAIRE.</p>
+
+<p>Also, take a look at the very interesting features developped specifically for journalists in this fork:</p>
+
+<p><a href="http://www.innovation-series.com/2013/10/24/introducing-kettlecorn-forking-popcorn-maker-for-journalists">http://www.innovation-series.com/2013/10/24/introducing-kettlecorn-forking-popcorn-maker-for-journalists/</a></p>
+
+
+
+  </body>
+  </html>
